@@ -6,5 +6,6 @@ name = "pypi"
 [packages]
 django = "*"
 python-decouple = "*"
+coverage = "*"
 
 [dev-packages]
