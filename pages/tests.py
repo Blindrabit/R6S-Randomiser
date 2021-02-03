@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
+
 from .views import HomePageView
+from .models import Attack,Defence
 
 
 class Home_Page_Tests(TestCase):
@@ -18,3 +20,20 @@ class Home_Page_Tests(TestCase):
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
 
 
+class Model_Testing(TestCase):
+
+    def setUp(self):
+        self.attack = Attack.objects.create(
+            operators = 'Fuze',
+        )
+        self.defence = Defence.objects.create(
+            operators = 'Smoke',
+        )
+
+    def test_models(self):
+        a = self.attack
+        d = self.defence
+        self.assertTrue(isinstance(a, Attack))
+        self.assertEqual(str(a), 'Fuze')
+        self.assertTrue(isinstance(d, Defence))
+        self.assertEqual(str(d), 'Smoke')
