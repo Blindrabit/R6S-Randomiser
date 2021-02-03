@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Attack(models.Model):
 
     operators = models.CharField(max_length=10)

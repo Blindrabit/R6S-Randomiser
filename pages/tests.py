@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse, resolve
 
 from .views import HomePageView
-from .models import Attack,Defence
+from .models import Attack, Defence
 
 
 class Home_Page_Tests(TestCase):
@@ -24,10 +24,10 @@ class Model_Testing(TestCase):
 
     def setUp(self):
         self.attack = Attack.objects.create(
-            operators = 'Fuze',
+            operators='Fuze',
         )
         self.defence = Defence.objects.create(
-            operators = 'Smoke',
+            operators='Smoke',
         )
 
     def test_models(self):
