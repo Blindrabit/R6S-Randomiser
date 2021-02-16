@@ -24,7 +24,7 @@ class Model_Testing(TestCase):
 
     def setUp(self):
         self.attack = Attack.objects.create(
-            operators='Fuze',
+            operators='Fuze-test',
         )
         self.defence = Defence.objects.create(
             operators='Smoke',
