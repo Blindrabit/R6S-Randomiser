@@ -36,4 +36,8 @@ jobs:
         pipenv install --deploy --dev
     - name: Flake8 test
       run: pipenv run flake8
+    - name: Coverage report
+      run: pipenv run coverage report
+    - name: Django Tests
+      run: pipenv run python manage.py tests
       
