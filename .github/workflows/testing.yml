@@ -35,5 +35,5 @@ jobs:
       run: |
         pipenv install --deploy --dev
     - name: Flake8 test
-      run: flake8
+      run: pipenv run flake8
       
