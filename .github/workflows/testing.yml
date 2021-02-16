@@ -29,5 +29,5 @@ jobs:
       uses: VaultVulp/action-pipenv@v2.0.1
       with:
         command: |
-          pipenv run test
+          run test
     
