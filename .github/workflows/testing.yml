@@ -34,10 +34,10 @@ jobs:
       if: steps.cache-pipenv.outputs.cache-hit != 'true'
       run: |
         pipenv install --deploy --dev
+    - name: Django Tests
+      run: pipenv run python manage.py test
     - name: Flake8 test
       run: pipenv flake8
     - name: Coverage report
       run: pipenv coverage report
-    - name: Django Tests
-      run: pipenv python manage.py test
       
