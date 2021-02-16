@@ -8,6 +8,7 @@ django = "*"
 coverage = "*"
 python-decouple = "*"
 flake8 = "*"
+gunicorn = "*"
 
 [dev-packages]
 
