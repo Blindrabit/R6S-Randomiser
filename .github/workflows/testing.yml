@@ -37,7 +37,9 @@ jobs:
     - name: Django Tests
       run: pipenv run python manage.py test
     - name: Coverage report
-      run: pipenv run coverage report
+      run: | 
+        pipenv run coverage run manage.py test
+        pipenv run coverage report
     - name: Flake8 test
       run: pipenv flake8
       
