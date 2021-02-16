@@ -29,7 +29,5 @@ jobs:
       uses: VaultVulp/action-pipenv@v2.0.1
       with:
         command: |
-          flake8
-          coverage report
-          python manage.py test
+          pipenv run test
     
