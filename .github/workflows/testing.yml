@@ -36,5 +36,3 @@ jobs:
     - name: Django Testing
       run: |
         python manage.py test
-
-      
